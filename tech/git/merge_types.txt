@@ -1,0 +1,60 @@
+Merge types in git:
+- merge
+- fast forward
+- rebase & merge
+- squash & merge
+- 3 way merge
+=======================
+
+Merge:
+
+          A---B---C topic
+         /
+    D---E---F---G master
+
+becomes
+
+          A---B---C topic
+         /         \
+    D---E---F---G---H master
+=======================
+
+Fast forward:
+
+          A---B---C topic
+         /
+    D---E master
+   
+becomes
+
+    D---E---A---B---C master
+=======================
+
+Rebase & Merge:
+
+          A---B---C topic
+         /
+    D---E---F---G master
+
+becomes
+
+    D---E---F---G---A---B---C master
+=======================
+
+Squash & Merge:
+
+          A---B---C topic
+         /
+    D---E---F---G master
+
+becomes
+
+    D---E---F---G---ABC master
+
+https://dev.to/ctnkaan/difference-between-git-merge-rebase-and-squash-3kg4
+=======================
+
+3 Way merge
+Means you compare the two conficting files and their latest common unchanged ancestor.
+
+https://blog.git-init.com/the-magic-of-3-way-merge/

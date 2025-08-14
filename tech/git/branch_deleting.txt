@@ -1,0 +1,8 @@
+to delete a branch 
+`git branch -d <branch>`
+
+deletes a branch
+
+Branch pointers apparently work like hard links,
+because when two branch heads point at the same commit
+you commit will stay if you delete (even force delete) the branch.
