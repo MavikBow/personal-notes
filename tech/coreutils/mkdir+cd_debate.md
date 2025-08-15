@@ -90,6 +90,45 @@ if the action is within the same file system, then an atomic rename(2)
 is called.  If moving across different file systems, then cp + rm is called.  
 I guess it takes off the cognitive load off of the user?  
 
+#Anti:
+=============================
+
+> Bob Proulx:
+```
+The mv command causes an atomic rename(2) to occur if on the same file
+system.  That is not possible when using cp + rm.  Therefore mv is
+required.
+```
+
+https://debbugs.gnu.org/cgi/bugreport.cgi?bug=5926  
+Message #53
+
+-----------------------------
+My comment:  
+Sounds to me like perfect use case of a shell script. Make    
+mv() a shell fuction that does exactly that.   
+If you worry about bloat (which of course you do, that's coreutils), this  
+should be a good change. /usr/bin/rename only takes 23kb of space    
+whereas /usr/bin/mv take entire 119kb. You should, in theory, replace    
+mv with rename as a coreutil binary, and then add mv() functionality as    
+a shell function for compatibility with legacy scripts.  
+
+> Bob Proulx:
+```
+If mv'ing a file from one file system to another it is impossible to
+have an atomic rename().  In that case mv falls back to effectively cp
+plus rm.  That is mentioned in the mv documentation.
+```
+
+https://debbugs.gnu.org/cgi/bugreport.cgi?bug=5926  
+Message #53
+
+-----------------------------
+My comment:  
+If this doesn't read like pseudocode for a script, I don't know what does.  
+
+#Pro:
+=============================
 
 > f0rhum:
 ```
