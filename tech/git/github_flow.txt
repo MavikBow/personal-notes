@@ -1,3 +1,13 @@
+Flow:
+      o---o                feature 1
+     /     \
+o---o---o---o---o---o---o  main
+     \         /    ^
+      o---o---o     |      feature 2
+                   tag?
+
+========================
+
 Branches:
 -	Main branch: prod
 -	Feature/Hotfix branches: branch out of and into the main branch
@@ -18,10 +28,4 @@ May be less stable
 Though in my experience, github flow projects use tags
 to mark stable points in the main branch.
 
-Flow:
-      o---o                feature 1
-     /     \
-o---o---o---o---o---o---o  main
-     \         /    ^
-      o---o---o     |      feature 2
-                   tag?
+[https://www.harness.io/blog/github-flow-vs-git-flow-whats-the-difference]
