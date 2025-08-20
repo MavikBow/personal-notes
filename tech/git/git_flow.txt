@@ -1,0 +1,36 @@
+Branches:
+-	Feature branches: for features
+-	Develop branch: unstable, combining features
+-	Release branches: stabilizing develop, bug fixing, documentation
+-	Main branch: production
+-	Hotfix branch: fixes production swiftly (and other branches?)
+
+Pros:
+Good for large projects with a lot of people. 
+Better product stability.
+Ease of programming numerous new features simultaneously.
+
+Cons:
+Merges galore.
+Delayed feature implementation.
+Hard to maintain.
+
+Flow:
+      o---o---o            feature 1
+     /         \
+o---o---o---o---o---o---o  develop 
+     \             /
+      o---o---o---o        feature 2
+
+
+o---o----o'----o'---o---o  develop 
+     \             /
+      o---o---o---o        release
+                   \
+--------------------o      main
+
+Developers create a new feature branch off the develop branch. 
+Once a feature is complete, it merges back into develop.
+When ready for a release, a release branch is created off develop.
+After final touches, it merges into main (and back into develop), 
+leading to a new release version.
