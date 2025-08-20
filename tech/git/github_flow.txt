@@ -24,8 +24,15 @@ Needs more rigorous testing.
 Harder to work on parallel features.
 May be less stable
 
-
 Though in my experience, github flow projects use tags
 to mark stable points in the main branch.
+
+========================
+
+CI/CD:
+All feature branches undergo automated testing.
+Small incremental changes are expected.
+Very fast to deploy. Easier to auto test.
+
 
 [https://www.harness.io/blog/github-flow-vs-git-flow-whats-the-difference]

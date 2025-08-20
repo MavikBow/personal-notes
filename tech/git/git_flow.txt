@@ -39,4 +39,14 @@ Merges galore.
 Delayed feature implementation.
 Hard to maintain.
 
+=========================
+
+CI/CD:
+Automated tests on feature, release and hotfix
+It's generally hard to do, since there are so many branches.
+Main is the stable release branch.
+Develop is the unstable release branch.
+Continuous Deployment is hard like that.
+
+
 [https://www.harness.io/blog/github-flow-vs-git-flow-whats-the-difference]
